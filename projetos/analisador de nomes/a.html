@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisador de Nomes</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="b.css">
+    <div class="card">
+        <h1>Analisador de Nomes</h1>
+        <div id="resultado"></div>
+        <button onclick="location.reload()">Reiniciar</button>
+    </div>
+
+    <script>
+        const nome = prompt('Digite seu nome completo:');
+        const resultado = document.getElementById('resultado');
+        //as veses o len não funciona e caga o codigo inteiro 
+        resultado.innerHTML += `<p class="resultado"><strong>Seu nome é:</strong>${nome}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>numero total de caracteres :<strong>${nome.length}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>A primeira letra é </strong>${nome.charAt(0)}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>A ultima letra é:</strong> ${nome.slice(-1)}<p>`
+        resultado.innerHTML += `<p class="resultado"><strong>A primeira letra "a" aparece:</strong> ${nome.indexOf('a')}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>A ultima letra "a" parece:</strong> ${nome.lastIndexOf('a')}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>Ultima três(3) letras:</strong> ${nome.slice(-3)}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>Nome separado:</strong> ${nome.split(' ')}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>Seu nome em maiusculo:</strong> ${nome.toUpperCase()}</p>`
+        resultado.innerHTML += `<p class="resultado"><strong>Seu nome em minusculo:</strong> ${nome.toLowerCase()}</p>`;
+    
+    </script>
+
+</body>
+</html>
